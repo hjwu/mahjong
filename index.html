@@ -1,0 +1,72 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	<title>Who is hu ?</title>
+	<link rel="stylesheet" href="mahjong.css" type="text/css"/>
+	<script type="text/javascript" src="mahjong.js"></script>
+	<script type="text/javascript" src="ui.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://github.com/malsup/blockui/raw/master/jquery.blockUI.js?v2.31"></script>
+	<link rel="shortcut icon" type="image/png" href="icon/mahjong.png" />
+</head>
+<body onload="initAllMJ()">
+<div id="title">Who is hu ?</div>
+<div id="mode">
+	<div id="backModeHome" style="display:none"><img id="homeSave"></div>
+	<div id="modeAll">
+		<img onclick="init(0)" id="lifemode" src="icon/lifemode.png" onmouseover="modeEffect(0,1)" onmouseout="modeEffect(0,0)">
+		<img onclick="init(1)" id="timemode" src="icon/timemode.png" onmouseover="modeEffect(1,1)" onmouseout="modeEffect(1,0)">
+		<a href="https://chrome.google.com/webstore/detail/caamblncpdokmacccgkbgngcgfahkjhe"><img id="help" src="icon/help.png" onmouseover="modeEffect(-1,1)" onmouseout="modeEffect(-1,0)"></a>
+		<img onclick="showOption(0)" id="optionmode" src="icon/option.png" onmouseover="modeEffect(-2,1)" onmouseout="modeEffect(-2,0)">
+	</div>
+	<div id="option" style="display:none">		
+		<div id="setOption">
+			<img onclick="showOption(1)" id="tiles" src="icon/tiles.png" onmouseover="modeEffect(-3,1)" onmouseout="modeEffect(-3,0)">
+			<img onclick="showOption(2)" id="theme" src="icon/theme.png" onmouseover="modeEffect(-4,1)" onmouseout="modeEffect(-4,0)">
+		</div>
+	</div>	
+	<div id="modeTile" style="display:none">
+		<div id="setTile">
+			<img onclick="changeTiles(13)" id="tile13" src="">
+			<img onclick="changeTiles(16)" id="tile16" src="">
+		</div>
+	</div>
+	<div id="modeTheme" style="display:none">
+		<div id="setTheme">
+			<img onclick="changeTheme(0)" id="theme0" style="background-image:url('icon/theme0.jpg')">
+			<img onclick="changeTheme(1)" id="theme1" style="background-image:url('icon/theme1.jpg')">
+			<img onclick="changeTheme(2)" id="theme2" style="background-image:url('icon/theme2.jpg')">
+		</div>
+	</div>
+</div>
+<div style="display:none" id="mahjong">
+	<div id="setZone">
+		<div id="backHome"><img id="aHome" onclick="myHome(0)" src="icon/home.png"></div>
+		<div id="score">0</div>
+		<div id="best">0</div>
+	</div>
+	<div id="gameZone">
+		<img id="q0"><img id="q1"><img id="q2"><img id="q3"><img id="q4"><img id="q5"><img id="q6"><img id="q7"><img id="q8"><img id="q9"><img id="q10"><img id="q11"><img id="q12"><img id="q13"><img id="q14"><img id="q15">
+		<div id="answerZone"></div>
+	</div>
+	<div id="pickZone">
+		<img id="a1"><img id="a2"><img id="a3"><img id="a4"><img id="a5"><img id="a6"><img id="a7"><img id="a8"><img id="a9"><img id="a11"><img id="a12"><img id="a13"><img id="a14"><img id="a15"><img id="a16"><img id="a17"><img id="a18"><img id="a19"><img id="a101"><img id="a102"><img id="a103"><img id="a104"><img id="a105"><img id="a106"><img id="a107"><img id="a108"><img id="a109"><img id="a1000"><img id="a2000"><img id="a3000"><img id="a4000"><img id="a5000"><img id="a6000"><img id="a7000"><img class="mahjong" style="display:none" id="aPass" src="icon/pass.png"><img class="mahjong" id="aEnter" src="icon/enter.png">
+	</div>
+	<div id="modeZone">
+		<div id="comboIMG"><img id="combo" src="icon/combo0.png"></div>
+		<div id="modeOption"><canvas id="modeCanvas" width="100" height="100"></canvas></div>
+	</div>
+ 	<div id="confirmBox" style="display:none;">
+ 		<h1></h1>
+ 		<div>
+		<input type="button" id="yes" value="Yes" /> 
+        <input type="button" id="no" value="No" /> 
+        </div>
+	</div> 
+</div>
+
+<div style="display:block" id="footer"><img src="http://jsygamela.com/logo/footer.png"></div>
+<div id="copyright">Copyright © 2011 Jhong Sheng Yuan Technology Co., Ltd. All rights reserved.</div>
+</body>
+</html>

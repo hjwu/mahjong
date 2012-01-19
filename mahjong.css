@@ -1,0 +1,31 @@
+html{text-align:center;background-color:black;}
+body{position:relative;margin:0 auto;width:1024px;height:800px;text-align:center; }
+div#title{position:relative;color:white;font-size:30pt; margin-top:50px;height:60px;}
+/* 一開始的頁面選項 */
+div#mode{position:relative; margin:20px auto; padding-top:70px; width:800px; background-image:url("icon/goldbg.jpg"); height:410px; }
+div#modeAll{margin:60px auto; width:300px; position:relative;}
+div#modeTheme{margin:60px auto; width:800px; position:relative;}
+div#modeTile, div#option{margin:60px auto; width:300px; position:relative;}
+div#setTheme{float:left; width:800px; position:relative; }
+/* 麻將桌面 */
+div#mahjong{position:relative;margin:20px auto; height:700px; width:100%; }
+/* 分數區 */ 
+div#setZone{position:relative; width:100%; color:white; font-size:25pt; height:70px; text-align:right; }
+div#backHome{position:relative; margin:10px 0 0 40px; float:left; width:50px; height:70px;}
+div#backModeHome{position:relative; margin-top:-20px; margin-left:50px; float:left; width:50px; height:70px;}
+div#score{position:relative; margin:20px 0 10px 90px; float:left; width:280px; height:30px; padding:15px 40px; background-image:url("icon/score.png"); }
+div#best{position:relative; margin:20px 40px 10px 0; float:right; width:280px; height:30px; padding:15px 40px; background-image:url("icon/best.png"); }
+/* 題目區 */
+div#gameZone{clear:both;position:relative; margin:40px 40px 0 40px; width:944px; height:85px; padding-top:15px; background-image:url("icon/bgborder.png"); }
+div#gameZone img{margin-left:5px; width:50px height:70px;}
+div#answerZone {float:right; margin:15px 40px 0 0; width:140px; height:25px; background-image:url("icon/answer.png"); color:white; font-size:15pt; padding-top:5px}
+/* 選項區*/
+div#pickZone{clear:both; position:relative; width:650px; margin:10px auto; }
+div#pickZone img{margin-left:10px; width:50px height:70px; float:left;}
+/* 選項顯示區 */
+div#modeZone{clear:both; position:relative; height:100px;}
+div#comboIMG{float:left; margin-left:50px; position:relative; width:200px;}
+div#modeOption{float:right; margin-right:50px; position:relative;}
+div#footer{clear:both;position:relative;margin:30px auto; text-align:center; }
+div#copyright{color:white;font-size:12pt;}
+input{margin:20px auto; position:relative;}

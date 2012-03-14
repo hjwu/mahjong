@@ -176,7 +176,7 @@ function selectAnswer(value){
 		for (var i=0; i<34; i++) {
 			document.getElementById("a" + mahjong[i].toString()).removeAttribute("onclick"); //鎖定答案
 			document.getElementById("a" + mahjong[i].toString()).removeAttribute("onmouseover");
-			var ans = null, tmp = null;			
+			var ans = null;			
 
 			if(pickMJIndex[i]) { 
 				ans = false;
@@ -255,12 +255,15 @@ function getWaiting(){
 	  		  	tmpHand[startJang] = -1;
 	  		  	tmpHand[startJang+1] = -1
 			  	startJang = startJang+2;
-			  	var startKan = 0, kanCnt = 0;
-			  	for (var j = startKan; j<=MJLength; j++){
+			  	//var startKan = 0, kanCnt = 0;
+                                var kanCnt = 0;
+			  	for (var j = 0 ; j<=MJLength; j++){
 					if (tmpHand[j] > -1) {
 						haveKan = false;
 						if (tmpHand[j] == tmpHand[j+1] && tmpHand[j] == tmpHand[j+2]) { 
-							tmpHand[j] = -1; tmpHand[j+1] = -1; tmpHand[j+2] = -1; startKan = j+3; haveKan = true; kanCnt++; }
+							tmpHand[j] = -1; tmpHand[j+1] = -1; tmpHand[j+2] = -1; 
+                                                        //startKan = j+3; 
+                                                        haveKan = true; kanCnt++; }
 						else {
 							for (var k = j+1; k<=MJLength; k++){ 
 								if (haveKan) break;
@@ -270,9 +273,11 @@ function getWaiting(){
 										if (tmpHand[l] == -1) continue;
 										else if (tmpHand[j] == tmpHand[k]-1 && tmpHand[k] == tmpHand[l]-1) {
 											tmpHand[j] = -1; tmpHand[k] = -1; tmpHand[l] = -1; kanCnt++;
+                                                                                        /*
 											if (k==j+1 && l==j+2) startKan = j+3;
 											else if (k==j+1 && l > j+2) startKan = j+2;
 											else startKan = j+1
+                                                                                        */
 											haveKan = true;
 											break;
 										}}}}}					
